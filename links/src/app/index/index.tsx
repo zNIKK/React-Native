@@ -26,7 +26,6 @@ export default function Index() {
             Alert.alert("Erro", "Não foi possivel listar os links")
         }
     }
-
     function handleDetails(selected: LinkStorage) {
         setShowModal(true)
         setLink(selected)
@@ -48,8 +47,6 @@ export default function Index() {
         ])
 
     }
-
-
     async function handleOpen() {
         try {
             await Linking.openURL(link.url)
@@ -60,6 +57,7 @@ export default function Index() {
         }
 
     }
+
     useFocusEffect(
         useCallback(() => {
             getLinks()
